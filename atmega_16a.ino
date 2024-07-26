@@ -6,7 +6,7 @@ unsigned long prievious_time_50Hz = millis();
 unsigned long prievious_display_update_800ms = millis();
 unsigned long prievious_display_volt_update_500ms = millis();
 unsigned long prievious_switch_delay_2000ms = millis();
-long time_35khz = 14;
+long time_35khz = 7;
 long time_50hz = 10;
 int A0_input;
 int display_switch = 14;
@@ -35,6 +35,7 @@ void setup() {
   pinMode(invertet_relay, OUTPUT);
   pinMode(usb_mosfet, OUTPUT);
   digitalWrite(display_supply, display_bool);
+  digitalWrite(invertet_relay, inverter_bool);
   lcd.begin(16, 4);
   lcd.print("hello, Sourav");
   lcd.setCursor(0, 3);
@@ -44,7 +45,6 @@ void loop() {
   unsigned long current_time_35KHz = micros();
   unsigned long current_time_50Hz = millis();
   unsigned long current_display_update_800ms = millis();
-  unsigned long current_display_volt_update_500ms = millis();
   unsigned long current_switch_delay_2000ms = millis();
   if(inverter_bool){
     if(current_time_35KHz - prievious_time_35KHz > time_35khz){
@@ -56,15 +56,17 @@ void loop() {
       prievious_time_35KHz = current_time_35KHz;
     }
   }
-  if(current_time_50Hz - prievious_time_50Hz > time_50hz){
+  /*if(current_time_50Hz - prievious_time_50Hz > time_50hz){
     if(f_50hz)
       PORTB = B00100000;
     else
       PORTB = B00010000;
     f_50hz = !f_50hz;
     prievious_time_50Hz = current_time_50Hz;
-  }
-  if(current_display_update_800ms - prievious_display_update_800ms> 800){
+  }*/
+  if(!inverter_bool)
+  {
+    if(current_display_update_800ms - prievious_display_update_800ms> 1000){
     A0_input = analogRead(A0);
     String battery_parsentage = String(map(A0_input, 460, 524, 000, 100));
     if(A0_input>= 531){
@@ -83,13 +85,12 @@ void loop() {
       lcd.setCursor(0, 1);
       lcd.print(battery_parsentage+"%                ");
     }
-    prievious_display_update_800ms = current_display_update_800ms;
-  }
-  if(current_display_volt_update_500ms - prievious_display_volt_update_500ms>500){
     String volt = String(map_f(A0_input, 0, 642, 0.0, 15.46));
     lcd.setCursor(2, 2);
     lcd.print("  "+volt+"V  ");
-    prievious_display_volt_update_500ms = current_display_volt_update_500ms;
+
+    prievious_display_update_800ms = current_display_update_800ms;
+    }
   }
   if(current_switch_delay_2000ms - prievious_switch_delay_2000ms>2000){
     if(digitalRead(display_switch)){
