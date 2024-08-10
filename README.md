@@ -5,8 +5,7 @@ High frequency inverter 50hz Atmega16a chip
 <br><br>
 schematic diagram
 <img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-50hz-Atmega16a-chip/main/all_media/Screenshot%202024-07-07%20005636.png">
-
-<br><br>
 Images
+<br><br>
 <img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3601.png" height="260" width="500">
 <img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3602.png" height="260" width="500">
