@@ -9,5 +9,5 @@ schematic diagram
 <br><br>
 Images
 <br>
-<img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3601.png" height="260" width="500">
-<img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3602.png" height="260" width="500">
+<img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3601.png" height="220" width="450">
+<img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3602.png" height="220" width="450">
