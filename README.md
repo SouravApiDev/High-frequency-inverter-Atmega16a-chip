@@ -8,4 +8,4 @@ Images
 <img src="https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3602.png">
 Tank Level Controller by using Attiny13A chip
 <br><br>
-[Watch the video](https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/Untitled%20video%20-%20Made%20with%20Clipchamp%20(1).mp4)
+[![Watch the video](https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/IMG_3602.png)](https://raw.githubusercontent.com/SouravApiDev/High-frequency-inverter-Atmega16a-chip/main/all_media/Untitled%20video%20-%20Made%20with%20Clipchamp%20(1).mp4)
